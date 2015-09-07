@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Core", "News.Core\News
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Extract.Clarin", "News.Extract.Clarin\News.Extract.Clarin.csproj", "{32898632-33C2-4DD8-81F3-C4F367015D21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Extract.Clarin.Test", "News.Extract.Clarin.Test\News.Extract.Clarin.Test.csproj", "{5D31DD38-8E48-4775-89AD-34BC0BC9BE18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{32898632-33C2-4DD8-81F3-C4F367015D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32898632-33C2-4DD8-81F3-C4F367015D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32898632-33C2-4DD8-81F3-C4F367015D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D31DD38-8E48-4775-89AD-34BC0BC9BE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D31DD38-8E48-4775-89AD-34BC0BC9BE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D31DD38-8E48-4775-89AD-34BC0BC9BE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D31DD38-8E48-4775-89AD-34BC0BC9BE18}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6EF0B4A-E878-49B6-AAE9-480AE816046B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6EF0B4A-E878-49B6-AAE9-480AE816046B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6EF0B4A-E878-49B6-AAE9-480AE816046B}.Release|Any CPU.ActiveCfg = Release|Any CPU
