@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{A6EF0B4A-E878-49B6-AAE9-480AE816046B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>News.Web</RootNamespace>
+    <AssemblyName>News.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="News\Extract\Clarin\Article.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="News\" />
+    <Folder Include="News\Extract\" />
+    <Folder Include="News\Extract\Clarin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="News\Extract\Clarin\Article.ashx.cs">
+      <DependentUpon>Article.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\News.Core\News.Core.csproj">
+      <Project>{D9ABDCC1-A131-4051-8CAE-CC0E0E6AD355}</Project>
+      <Name>News.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\News.Extract.Clarin\News.Extract.Clarin.csproj">
+      <Project>{32898632-33C2-4DD8-81F3-C4F367015D21}</Project>
+      <Name>News.Extract.Clarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

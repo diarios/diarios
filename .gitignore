@@ -1,0 +1,9 @@
+/News.Core/bin
+/News.Core/bin/obj
+/News.Extract.Clarin/bin
+/News.Extract.Clarin/obj
+/News.Web/bin
+/News.Web/obj
+/News.userprefs
+/packages/*
+!/packages/repositories.config
