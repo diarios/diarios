@@ -11,6 +11,7 @@ namespace News.Extract.Clarin
 		{
 			response.WriteStartElement ("article");
 			response.WriteAttributeString ("title", (document.SelectSingleNode("//h1/text()") as HtmlTextNode).Text);
+			response.WriteAttributeString ("subtitle", (document.SelectSingleNode("//h1/../p/text()") as HtmlTextNode).Text);
 			response.WriteEndElement ();
 		}
 	}

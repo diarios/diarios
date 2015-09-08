@@ -1,18 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<title></title>
 		<style>
 			input {
 				width: 800px;
 			}
 
+			iframe {
+				width: 900px;
+				height: 600px;
+			}
+
 		</style>
 	</head>
 	<body>
-		<form method="post" enctype="application/x-www-form-urlencoded" action="/News/Extract/Clarin/Article.ashx" target="_blank">
+		<form method="post" enctype="application/x-www-form-urlencoded" action="/News/Extract/Clarin/Article.ashx" target="result">
 			<input type="text" name="url" value="http://www.clarin.com/politica/Alberto_Nisman-polvora-Viviana_Fein-barrido_electronico_0_1426657688.html"/>
 			<button>Extraer</button>
 		</form>
+		<iframe name="result"></iframe>
 	</body>
 </html>
