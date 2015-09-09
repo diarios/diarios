@@ -48,11 +48,18 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="index.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ICrawler.cs" />
+    <Compile Include="ICrawler.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Clarin\Nota.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clarin\" />
   </ItemGroup>
 </Project>

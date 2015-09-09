@@ -3,3 +3,4 @@
 /packages/*
 !/packages/repositories.config
 /News.userprefs
+/StyleCop.Cache
