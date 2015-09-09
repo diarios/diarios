@@ -16,9 +16,9 @@
         /// <param name="response">Salida en xml.</param>
         public void Craw(HtmlNode document, XmlWriter response)
         {
-            response.WriteStartElement("article");
-            response.WriteAttributeString("title", document.SelectSingleNodeText("//h1"));
-            response.WriteAttributeString("subtitle", document.SelectSingleNodeText("//h1/../p"));
+            response.WriteStartElement("nota");
+            response.WriteAttributeString("titulo", document.SelectSingleNodeText("//h1"));
+            response.WriteAttributeString("subtitulo", document.SelectSingleNodeText("//h1/../p"));
             response.WriteEndElement();
         }
     }

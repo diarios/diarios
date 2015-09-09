@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using HtmlAgilityPack;
 using System.Reflection;
+using System.IO;
+using System.Text;
+using System.Xml;
 
 namespace News
 {
@@ -28,14 +31,13 @@ namespace News
 		protected void Application_BeginRequest (Object sender, EventArgs e)
 		{
 			if (crawlers.ContainsKey (this.Request.Path)) {
-
 				this.Response.ContentType = "text/xml";
+                var writer = new XmlTextWriter (this.Response.Output);
 				crawlers[this.Request.Path].Craw (
-					new HtmlWeb ().Load (this.Request.Form ["url"]).DocumentNode,
-					new System.Xml.XmlTextWriter(this.Response.Output)
+                    new HtmlWeb ().Load (new StreamReader(this.Request.InputStream).ReadToEnd()).DocumentNode,
+					writer
 				);
 				this.Response.End ();
-
 			}
 		}
 	}

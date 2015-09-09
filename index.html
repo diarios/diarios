@@ -8,11 +8,33 @@
 				width: 800px;
 			}
 		</style>
+
+        <script>
+            function send(form) {
+                var xhr = new XMLHttpRequest();
+                xhr.open(form.method, form.action, true);
+                xhr.onreadystatechange = function() {
+                    if(xhr.readyState == 4) {
+                        var pre = document.getElementsByTagName("pre")[0];
+                        while(pre.firstChild)
+                            pre.removeChild(pre.firstChild);
+                        pre.appendChild(document.createTextNode(xhr.responseText));
+                    }
+                };
+                xhr.send(form.url.value);
+                return false;
+            }
+        </script>
+
 	</head>
 	<body>
-		<form method="post" enctype="application/x-www-form-urlencoded" action="/News/Clarin/Nota" target="_blank">
+		<form method="POST" action="/News/Clarin/Nota" onsubmit="return send(this);">
 			<input type="text" name="url" value="http://www.clarin.com/politica/Alberto_Nisman-polvora-Viviana_Fein-barrido_electronico_0_1426657688.html"/>
 			<button>Extraer</button>
 		</form>
+
+        <pre>
+
+        </pre>
 	</body>
 </html>
