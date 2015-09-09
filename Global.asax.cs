@@ -15,7 +15,7 @@ namespace News
 		private static Dictionary<string, ICrawler> crawlers;
 
 		protected void Application_Start (Object sender, EventArgs e)
-		{
+		{ 
 			crawlers = Assembly.GetExecutingAssembly()
 				.GetTypes ()
 				.Where (type => type.GetInterfaces ().Contains (typeof(ICrawler)))

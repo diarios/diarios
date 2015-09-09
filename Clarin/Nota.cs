@@ -17,8 +17,8 @@
         public void Craw(HtmlNode document, XmlWriter response)
         {
             response.WriteStartElement("article");
-            response.WriteAttributeString("title", (document.SelectSingleNode("//h1/text()") as HtmlTextNode).Text);
-            response.WriteAttributeString("subtitle", (document.SelectSingleNode("//h1/../p/text()") as HtmlTextNode).Text);
+            response.WriteAttributeString("title", document.SelectSingleNodeText("//h1"));
+            response.WriteAttributeString("subtitle", document.SelectSingleNodeText("//h1/../p"));
             response.WriteEndElement();
         }
     }

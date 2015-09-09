@@ -58,6 +58,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Clarin\Nota.cs" />
+    <Compile Include="HtmlDocumentExtensions.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clarin\" />
