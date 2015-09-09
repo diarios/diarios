@@ -29,7 +29,11 @@
 	</head>
 	<body>
 		<form method="POST" action="/News/Clarin/Nota" onsubmit="return send(this);">
-			<input type="text" name="url" value="http://www.clarin.com/politica/Alberto_Nisman-polvora-Viviana_Fein-barrido_electronico_0_1426657688.html"/>
+			<input type="text" name="url" list="options" />
+            <datalist id="options">
+                <option value="http://www.clarin.com/politica/Alberto_Nisman-polvora-Viviana_Fein-barrido_electronico_0_1426657688.html">http://www.clarin.com/politica/Alberto_Nisman-polvora-Viviana_Fein-barrido_electronico_0_1426657688.html</option>
+                <option value="http://www.clarin.com/politica/Elecciones_2015-Tucuman-Manzur-Cano_0_1426657622.html">http://www.clarin.com/politica/Elecciones_2015-Tucuman-Manzur-Cano_0_1426657622.html</option>
+            </datalist>
 			<button>Extraer</button>
 		</form>
 

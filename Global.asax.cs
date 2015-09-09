@@ -32,6 +32,7 @@ namespace News
 		{
 			if (crawlers.ContainsKey (this.Request.Path)) {
 				this.Response.ContentType = "text/xml";
+                this.Response.Output.WriteLine ("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>");
                 var writer = new XmlTextWriter (this.Response.Output);
 				crawlers[this.Request.Path].Craw (
                     new HtmlWeb ().Load (new StreamReader(this.Request.InputStream).ReadToEnd()).DocumentNode,
